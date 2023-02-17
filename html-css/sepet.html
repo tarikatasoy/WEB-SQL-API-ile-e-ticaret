@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>E-TICARET</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="sepet.css">
+</head>
+<body id="sepetbody">
+
+  <div id="baslik">
+    <nav>
+        <ul>
+          <li><button onclick="cikisyap()">CIKIS YAP</button></li>
+          <li><button>UYE OL</button></li>
+          <li class="login"><button><img src="../html-css/img/user.png">GIRIS YAP</button></li>
+          <li><button onclick="SPTyonlendir()">
+              <img src ="../html-css/img/sepet.png"></button></li>
+          <li><button>ILETISIM</button></li>
+          <li><button>KATEGORILER</button></li>
+          <li><button onclick="anasayfayonlendir()">ANASAYFA</button></li>
+          <li><button onclick="adminyonlendir()">ADMIN</button></li>
+        </ul>
+      </nav>
+    </div>
+
+
+    <div id="login-popup">
+        <div class="kayitform">
+          <label for="username">Kullanıcı adı:</label><br>
+          <input type="text" id="username"><br>
+          <label for="password">Şifre:</label><br>
+          <input type="password" id="password"><br><br>
+          <button id="giris" onclick="girisyap()">GIRIS</button>  
+        </div>
+      </div>
+
+      
+      <div id="signup-popup">
+        <div class="kayitform">
+          <label for="username">Kullanıcı adı:</label><br>
+          <input type="text" id="kayit-username"><br>
+          <label for="password">Şifre:</label><br>
+          <input type="password" id="kayit-password"><br>
+          <label for="tel">Telefon:</label><br>
+          <input type="text" id="tel"><br><br> 
+          <button id="uyeol" onclick="kayitol()">KAYIT OL</button>
+        </div>
+      </div>  
+
+      <div id="toplamucret" style="position: fixed; bottom: 2%; margin-left: 75%;">
+        <label id="fiyat" for="" style="color: black;">TOPLAM FIYAT:</label>
+        <button onclick="al()" style="margin-left: 50px;">SATIN AL</button>
+
+    <script src="../services/sepetservis.js"></script>
+    <script src="../Controller/sepet.js"></script>
+    <script src="../Controller/LoginSignin.js"></script>
+    <script src="../Controller/SayfaYonlendir.js"></script>
+    <script src="../sql.js"></script>
+</div>
+</body>
+</html>

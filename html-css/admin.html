@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    
+</head>
+<body id="adminBody">
+
+    <div id="baslik">
+    <nav>
+        <ul>
+          <li><button onclick="cikisyap()">CIKIS YAP</button></li>
+          <li><button>UYE OL</button></li>
+          <li class="login"><button><img src="../html-css/img/user.png">GIRIS YAP</button></li>
+          <li><button onclick="SPTyonlendir()">
+              <img src ="../html-css/img/sepet.png"></button></li>
+          <li><button>ILETISIM</button></li>
+          <li><button>KATEGORILER</button></li>
+          <li><button onclick="anasayfayonlendir()">ANASAYFA</button></li>
+          <li><button onclick="adminyonlendir()">ADMIN</button></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="login-popup">
+        <div class="kayitform">
+        <label for="username">Kullanıcı adı:</label><br>
+        <input type="text" id="username"><br>
+        <label for="password">Şifre:</label><br>
+        <input type="password" id="password"><br><br>
+        <button id="giris" onclick="girisyap()">GIRIS</button>  
+        </div>
+    </div>
+
+    
+    <div id="signup-popup">
+      <div class="kayitform">
+        <label for="username">Kullanıcı adı:</label><br>
+        <input type="text" id="kayit-username"><br>
+        <label for="password">Şifre:</label><br>
+        <input type="password" id="kayit-password"><br>
+        <label for="tel">Telefon:</label><br>
+        <input type="text" id="tel"><br><br> 
+        <button id="uyeol" onclick="kayitol()">KAYIT OL</button>
+      </div>
+    </div>  
+  
+
+<div id="adminurunekle">
+      <div>
+            <label>FOTOĞRAF YÜKLE :</label> 
+            <input id="photoUpload" type="file" name="urun" accept=".jpg, .png" onchange="imageUploaded()"><br>
+            <label>ÜRÜN ADI :</label>
+            <input type="text" style="margin-left: 52px;"><br>
+            <label>STOK DURUM: </label>
+            <input type="text" style="margin-left: 32px;"><br>
+            <label>ÜRÜN FİYATI: </label>
+            <input type="text" style="margin-left: 37px;"><br><br>
+            <button style="margin-left: 210px;" onclick="urunuekle()" >ÜRÜNÜ EKLE</button>
+
+     </div>
+</div>
+
+<div id="adminurunguncelle">
+  <div>
+        <label>FOTOĞRAF YÜKLE :</label> 
+        <input id="foto" type="file" name="urun" accept=".jpg, .png" onchange="imageUploadedguncelle()"><br>
+        <label>ÜRÜN ID :</label>
+        <input type="text" style="margin-left: 63px;"><br>
+        <label>ÜRÜN ADI :</label>
+        <input type="text" style="margin-left: 52px;" disabled><br>
+        <label>STOK DURUM: </label>
+        <input type="text" style="margin-left: 32px;" disabled><br>
+        <label>ÜRÜN FİYATI: </label>
+        <input type="text" style="margin-left: 37px;" disabled><br>
+        <button style="margin-left: 862px;" onclick="urungetir()" >ÜRÜNÜ GETIR</button>
+        <button style="margin-left: 862px;" onclick="urunguncelle()" disabled>ÜRÜNÜ GÜNCELLE</button>
+        <button style="margin-left: 862px;" onclick="urunsil()" disabled>ÜRÜNÜ SİL</button>
+
+ </div>
+</div>
+  
+
+<script src="../Controller/admin.js"></script>
+<script src="../services/adminservis.js"></script>
+<script src="../Controller/LoginSignin.js"></script>
+<script src="../Controller/SayfaYonlendir.js"></script>
+<script src="../sql.js"></script>
+</body>
